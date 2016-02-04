@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Kind</key>
+  <string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+  <key>Description</key>
+  <string>A custom empty Objective-c file with license.</string>
+  <key>Summary</key>
+  <string>A custom empty Objective-c file with license</string>
+  <key>SortOrder</key>
+  <string>5</string>
+  <key>Platforms</key>
+  <array>
+    <string>com.apple.platform.iphoneos</string>
+    <string>com.apple.platform.macosx</string>
+  </array>
+  <key>AllowedTypes</key>
+  <array>
+    <string>public.objective-c-source</string>
+    <string>public.objective-c-plus-plus-source</string>
+  </array>
+  <key>DefaultCompletionName</key>
+  <string>File</string>
+  <key>MainTemplateFile</key>
+  <string>___FILEBASENAME___.m</string>
+
+  <!-- 可选配置 -->
+  <key>Options</key>
+  <array>
+    <!-- 类名 -->
+    <dict>
+      <key>Identifier</key>
+      <string>productName</string>
+      <key>Description</key>
+      <string>The name of the class to create</string>
+      <key>Name</key>
+      <string>Class Name:</string>
+      <key>NotPersisted</key>
+      <true/>
+      <key>Required</key>
+      <true/>
+      <key>Type</key>
+      <string>text</string>
+    </dict>
+    <!-- 基类 -->
+    <dict>
+      <key>Identifier</key>
+      <string>c_cocoaTouchSubclass</string>
+      <key>Description</key>
+      <string>a objective-c class</string>
+      <key>Name</key>
+      <string>Subclass of:</string>
+      <key>Required</key>
+      <string>YES</string>
+      <key>Type</key>
+      <string>class</string>
+      <key>Default</key>
+      <string>NSObject</string>
+      <!-- <key>Values</key>
+      <array>
+        <string>NSObject</string>
+        <string>UIView</string>
+        <string>UIViewController</string>
+        <string>UITableViewController</string>
+        <string>UITableViewCell</string>
+        <string>UICollectionViewController</string>
+        <string>UICollectionViewCell</string>
+        <string>UICollectionReusableView</string>
+        <string>WKInterfaceController</string>
+        <string>WKUserNotificationInterfaceController</string>
+      </array>
+      <key>Suffixes</key>
+        <dict>
+          <key>UIView</key>
+          <string>View</string>
+          <key>UIViewController</key>
+          <string>ViewController</string>
+          <key>UITableViewController</key>
+          <string>TableViewController</string>
+          <key>UITableViewCell</key>
+          <string>TableViewCell</string>
+          <key>UICollectionViewController</key>
+          <string>CollectionViewController</string>
+          <key>UICollectionViewCell</key>
+          <string>CollectionViewCell</string>
+          <key>UICollectionReusableView</key>
+          <string>CollectionReusableView</string>
+          <key>WKInterfaceController</key>
+          <string>InterfaceController</string>
+          <key>WKUserNotificationInterfaceController</key>
+          <string>NotificationController</string>
+        </dict> -->
+    </dict>
+    <!-- 创建者 -->
+    <dict>
+      <!-- 选项对象唯一标识 -->
+      <key>Identifier</key>
+      <string>c_createdBy</string>
+      <!-- 选项对象描述 -->
+      <key>Description</key>
+      <string>Created by who?</string>
+      <!-- 模版设置导航时，当前选项的前置标题 -->
+      <key>Name</key>
+      <string>Created By:</string>
+      <!-- 是否是必填选项 -->
+      <key>Required</key>
+      <false/>
+      <!-- 不会被序列化，如果为flase，表示会记住上一次输入的文本内容 -->
+      <key>NotPersisted</key>
+      <false/>
+      <!-- 排列顺序 -->
+      <key>SortOrder</key>
+      <integer>103</integer>
+      <!-- 选项的类型（文本框） -->
+      <key>Type</key>
+      <string>text</string>
+      <!-- 选项的默认值 -->
+      <key>Default</key>
+      <string>ReeFish</string>
+    </dict>
+    <!-- 公司 -->
+    <dict>
+      <key>Identifier</key>
+      <string>c_company</string>
+      <key>Description</key>
+      <string>the company</string>
+      <key>Name</key>
+      <string>Company:</string>
+      <key>Required</key>
+      <false/>
+      <key>NotPersisted</key>
+      <false/>
+      <key>SortOrder</key>
+      <integer>104</integer>
+      <key>Type</key>
+      <string>text</string>
+      <key>Default</key>
+      <string>ReeFish ( http://ReeFish.org )</string>
+    </dict>
+    <!-- license 版权许可协议（开源，或私有） -->
+    <dict>
+        <key>Identifier</key>
+            <string>c_license</string>
+        <key>Name</key>
+            <string>Copyright License:</string>
+        <key>NotPersisted</key>
+            <false/>
+        <key>SortOrder</key>
+            <integer>105</integer>
+        <key>Type</key>
+            <string>popup</string>
+        <key>Default</key>
+        <string>MIT</string>
+        <key>Values</key>
+        <array>
+            <string>Private</string>
+            <string>MIT</string>
+            <string>Apache 2.0</string>
+            <string>BSD 3-Clause</string>
+            <string>Unlicense</string>
+            <string>Zlib</string>
+        </array>
+        
+    </dict>
+
+  </array>
+
+</dict>
+</plist>

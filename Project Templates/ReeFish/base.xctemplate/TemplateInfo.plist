@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 模版类型 -->
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <!-- 模版唯一标识ID -->
+	<key>Identifier</key>
+	<string>org.reefish.app.template.base</string>
+    <!-- 模版的名称 -->
+    <key>Name</key>
+    <string>ReeFish App</string>
+    <!-- 模版作者 -->
+    <key>Template Author</key>
+    <string>ReeFish ( http://ReeFish.org )</string>
+    <!-- 需要继承的父模版 -->
+    <key>Ancestors</key>
+    <array>
+        <string>org.reefish.app.template.empty</string>
+    </array>
+    <!-- 新建模板时，是否显示在可选择窗口 -->
+	<key>Concrete</key>
+	<true/>
+    <!-- 模板的简单描述 -->
+	<key>Description</key>
+	<string>provide a empty template without storyboard or nib or coreData, but with custom copyright info, cocopods files, and custom directory structure. </string>
+    <!-- 排列顺序 -->
+	<key>SortOrder</key>
+	<integer>2</integer>
+
+    <!-- 目标对象 -->
+  <!--   <key>Targets</key>
+    <array>
+    </array> -->
+
+
+    <!-- 可选配置 -->
+	<key>Options</key>
+	<array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Objective-C</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>ViewController.h:comments</string>
+                        <string>ViewController.h:imports:importCocoa</string>
+                        <string>ViewController.h:interface(___FILEBASENAME___ : UIViewController)</string>
+                        <string>ViewController.m:comments</string>
+                        <string>ViewController.m:imports:importHeader:ViewController.h</string>
+                        <string>ViewController.m:extension</string>
+                        <string>ViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)</string>
+                        <string>ViewController.m:implementation:methods:viewDidLoad:super</string>
+                        <string>ViewController.m:implementation:methods:didReceiveMemoryWarning(- (void\)didReceiveMemoryWarning)</string>
+                        <string>ViewController.m:implementation:methods:didReceiveMemoryWarning:super</string>
+                        <string>main.m:comments</string>
+                        <string>main.m:imports:importCocoa</string>
+                        <string>main.m:imports:importHeader:AppDelegate.h</string>
+                        <string>main.m:main:UIApplicationMain</string>
+                        <string>AppDelegate.h:comments</string>
+                        <string>AppDelegate.h:imports:importCocoa</string>
+                        <string>AppDelegate.h:interface(AppDelegate : UIResponder &lt;UIApplicationDelegate&gt;)</string>
+                        <string>AppDelegate.h:interface:window</string>
+                        <string>AppDelegate.m:comments</string>
+                        <string>AppDelegate.m:imports:importHeader:AppDelegate.h</string>
+                        <string>AppDelegate.m:imports:importOther</string>
+                        <string>AppDelegate.m:extension</string>
+                        <string>AppDelegate.m:implementation:synthesize</string>
+                        <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions(- (BOOL\)application:(UIApplication *\)application didFinishLaunchingWithOptions:(NSDictionary *\)launchOptions)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+                        <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillResignActive(- (void\)applicationWillResignActive:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillResignActive:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidEnterBackground(- (void\)applicationDidEnterBackground:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidEnterBackground:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillEnterForeground(- (void\)applicationWillEnterForeground:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillEnterForeground:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidBecomeActive(- (void\)applicationDidBecomeActive:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidBecomeActive:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillTerminate(- (void\)applicationWillTerminate:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillTerminate:comments</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>main.m:main</key>
+                        <dict>
+                            <key>Beginning</key>
+                            <string>int main(int argc, char * argv[]) {</string>
+                            <key>End</key>
+                            <string>}</string>
+                            <key>Indent</key>
+                            <integer>1</integer>
+                        </dict>
+                        <key>main.m:main:UIApplicationMain</key>
+                        <string>@autoreleasepool {
+    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+}
+</string>
+                        <key>AppDelegate.h:interface:window</key>
+                        <string>@property (strong, nonatomic) UIWindow *window;
+</string>
+                        <key>AppDelegate.m:imports:importOther</key>
+                        <string>#import "ViewController.h"
+                        </string>
+                        <key>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+                    <string>self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+ViewController *vc = [[ViewController alloc] init];
+self.window.rootViewController = vc;
+[self.window makeKeyAndVisible];</string>
+                        <key>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return</key>
+                        <string>return YES;</string>
+
+                        <key>ViewController.m:implementation:methods:viewDidLoad:super</key>
+                        <string>[super viewDidLoad];
+self.view.backgroundColor = [UIColor whiteColor];
+    
+UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200,  200)];
+label.textAlignment = NSTextAlignmentCenter;
+label.text = @"Hello ReeFish!";
+[self.view addSubview:label];
+label.center = self.view.center;</string>
+
+                        <key>*:implementation:methods:viewDidLoad:super</key>
+                        <string>[super viewDidLoad];
+// Do any additional setup after loading the view, typically from a nib.</string>
+                        <key>*:implementation:methods:didReceiveMemoryWarning:super</key>
+                        <string>[super didReceiveMemoryWarning];
+// Dispose of any resources that can be recreated.</string>
+                    </dict>
+                </dict>
+                <key>Swift</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>ViewController.swift:comments</string>
+                        <string>ViewController.swift:imports:importCocoa</string>
+                        <string>ViewController.swift:implementation(___FILEBASENAME___: UIViewController)</string>
+                        <string>ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+                        <string>ViewController.swift:implementation:methods:viewDidLoad:super</string>
+                        <string>ViewController.swift:implementation:methods:didReceiveMemoryWarning(override func didReceiveMemoryWarning(\))</string>
+                        <string>ViewController.swift:implementation:methods:didReceiveMemoryWarning:super</string>
+                        <!--
+                         <string>main.swift:comments</string>
+                         <string>main.swift:imports:importCocoa</string>
+                         <string>main.swift:main:UIApplicationMain</string>
+                         -->
+                        <string>AppDelegate.swift:comments</string>
+                        <string>AppDelegate.swift:imports:importCocoa</string>
+                        <string>AppDelegate.swift:UIApplicationMain</string>
+                        <string>AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)</string>
+                        <string>AppDelegate.swift:implementation:properties:window</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions(func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?\) -&gt; Bool)</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillResignActive(func applicationWillResignActive(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillResignActive:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidEnterBackground(func applicationDidEnterBackground(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidEnterBackground:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillEnterForeground(func applicationWillEnterForeground(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillEnterForeground:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidBecomeActive(func applicationDidBecomeActive(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidBecomeActive:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillTerminate(func applicationWillTerminate(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillTerminate:comments</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <!--
+                        <key>main.swift:main:UIApplicationMain</key>
+                        <string>UIApplicationMain(C_ARGC, C_ARGV, nil, NSStringFromClass(AppDelegate.self))</string>
+                         -->
+                        <key>AppDelegate.swift:UIApplicationMain</key>
+                        <string>@UIApplicationMain</string>
+                        <key>AppDelegate.swift:implementation:properties:window</key>
+                        <string>var window: UIWindow?</string>
+                        <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+                        <string>self.window = UIWindow();
+self.window?.rootViewController = ViewController();
+self.window?.makeKeyAndVisible();</string>
+                        <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</key>
+                        <string>return true</string>
+
+                        <key>ViewController.swift:implementation:methods:viewDidLoad:super</key>
+                        <string>super.viewDidLoad()
+self.view.backgroundColor = UIColor.whiteColor();
+
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200));
+label.textAlignment = NSTextAlignment.Center;
+label.text = "Hello ReeFish!";
+self.view.addSubview(label);
+label.center = self.view.center;</string>
+                        
+                        <key>*:implementation:methods:viewDidLoad:super</key>
+                        <string>super.viewDidLoad()
+// Do any additional setup after loading the view, typically from a nib.</string>
+                        <key>*:implementation:methods:didReceiveMemoryWarning:super</key>
+                        <string>super.didReceiveMemoryWarning()
+// Dispose of any resources that can be recreated.</string>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+
+        
+	</array>
+
+    <!-- 相关的文件、目录定义 -->
+    <key>Definitions</key>
+    <dict>
+        <key>../src/</key>
+        <dict>
+            <!-- 需要从（相对于自定义模版）哪个路径下，拷贝文件或文件夹 -->
+            <key>Path</key>
+            <string>src</string>
+            <!-- xcode工程目录中，当前节点外部包裹的group目录列表-->
+            <key>Group</key>
+            <array/>
+            <key>TargetIndices</key>
+            <array/>
+            <!-- <key>PathType</key>
+            <string>Group</string> -->
+        </dict>
+
+        <key>../resources/</key>
+        <dict>
+            <key>Path</key>
+            <string>resources</string>
+            <key>Group</key>
+            <array/>
+            <key>TargetIndices</key>
+            <array/>
+        </dict>
+
+        <key>empty/</key>
+        <dict>
+            <key>Path</key>
+            <!-- 需要在TemplateInfo.plist同级目录生成一个空文件夹folder -->
+            <string>folder</string>
+            <key>Group</key>
+            <array/>
+            <key>TargetIndices</key>
+            <array/>
+        </dict>
+
+        <key>../.gitignore</key>
+        <dict>
+            <key>Path</key>
+            <string>gitignore</string>
+            <key>Group</key>
+            <string>Supporting Files</string>
+            <key>TargetIndices</key>
+            <array/>
+        </dict>
+
+        <key>../Podfile</key>
+        <dict>
+            <key>Path</key>
+            <string>Podfile</string>
+            <key>Group</key>
+            <string>Supporting Files</string>
+            <key>TargetIndices</key>
+            <array/>
+        </dict>
+    </dict>
+    <!-- 模版需要包含的节点列表 -->
+    <key>Nodes</key>
+    <array>
+        <!-- 资源目录 -->
+        <string>../resources/</string>
+
+        <!-- ..表示相对于AppDelegate文件的上级目录，目录名为src -->
+        <string>../src/</string>
+
+        <!-- 测试创建一个空目录 -->
+        <!-- <string>empty/</string> -->
+
+        <!-- git忽略文件 -->
+        <string>../.gitignore</string>
+
+        <!-- Podfile文件 -->
+        <string>../Podfile</string>
+    </array>
+
+    <!-- 自定义模版宏 -->
+    <key>Macros</key>
+    <dict>
+    </dict>
+
+</dict>
+</plist>

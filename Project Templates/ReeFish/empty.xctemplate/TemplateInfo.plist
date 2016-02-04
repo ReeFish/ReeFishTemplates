@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 模版类型 -->
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <!-- 模版唯一标识ID -->
+	<key>Identifier</key>
+	<string>org.reefish.app.template.empty</string>
+    <!-- 模版的名称 -->
+    <key>Name</key>
+    <string>Empty App</string>
+    <!-- 模版作者 -->
+    <key>Template Author</key>
+    <string>ReeFish ( http://ReeFish.org )</string>
+    <!-- 需要继承的父模版 -->
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.applicationBase</string>
+        <string>com.apple.dt.unit.iosBase</string>
+        <string>com.apple.dt.unit.languageChoice</string>
+    </array>
+    <!-- 新建模板时，是否显示在可选择窗口 -->
+	<key>Concrete</key>
+	<true/>
+    <!-- 模板的简单描述 -->
+	<key>Description</key>
+	<string>provide a empty template without storyboard or nib or coreData, but with custom copyright info</string>
+    <!-- 排列顺序 -->
+	<key>SortOrder</key>
+	<integer>1</integer>
+
+    <!-- 目标对象 -->
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.cocoaTouchApplicationTarget</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+                <string>AppIcon</string>
+                <key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+                <string>LaunchImage</string>
+                <key>LD_RUNPATH_SEARCH_PATHS</key>
+                <string>$(inherited) @executable_path/Frameworks</string>
+                <key>IPHONEOS_DEPLOYMENT_TARGET</key>
+                <string>7.0</string>
+            </dict>
+            <key>Frameworks</key>
+            <array>
+                <string>UIKit</string>
+                <string>Foundation</string>
+                <string>CoreGraphics</string>
+            </array>
+            <key>Configurations</key>
+            <dict>
+                <key>Debug</key>
+                <dict/>
+                <key>Release</key>
+                <dict/>
+            </dict>
+        </dict>
+    </array>
+
+    <!-- 可选配置 -->
+	<key>Options</key>
+	<array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Objective-C</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>main.m:comments</string>
+                        <string>main.m:imports:importCocoa</string>
+                        <string>main.m:imports:importHeader:AppDelegate.h</string>
+                        <string>main.m:main:UIApplicationMain</string>
+                        <string>AppDelegate.h:comments</string>
+                        <string>AppDelegate.h:imports:importCocoa</string>
+                        <string>AppDelegate.h:interface(AppDelegate : UIResponder &lt;UIApplicationDelegate&gt;)</string>
+                        <string>AppDelegate.h:interface:window</string>
+                        <string>AppDelegate.m:comments</string>
+                        <string>AppDelegate.m:imports:importHeader:AppDelegate.h</string>
+                        <string>AppDelegate.m:extension</string>
+                        <string>AppDelegate.m:implementation:synthesize</string>
+                        <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions(- (BOOL\)application:(UIApplication *\)application didFinishLaunchingWithOptions:(NSDictionary *\)launchOptions)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+                        <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillResignActive(- (void\)applicationWillResignActive:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillResignActive:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidEnterBackground(- (void\)applicationDidEnterBackground:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidEnterBackground:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillEnterForeground(- (void\)applicationWillEnterForeground:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillEnterForeground:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidBecomeActive(- (void\)applicationDidBecomeActive:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidBecomeActive:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillTerminate(- (void\)applicationWillTerminate:(UIApplication *\)application)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillTerminate:comments</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>main.m:main</key>
+                        <dict>
+                            <key>Beginning</key>
+                            <string>int main(int argc, char * argv[]) {</string>
+                            <key>End</key>
+                            <string>}</string>
+                            <key>Indent</key>
+                            <integer>1</integer>
+                        </dict>
+                        <key>main.m:main:UIApplicationMain</key>
+                        <string>@autoreleasepool {
+    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+}
+</string>
+                        <key>AppDelegate.h:interface:window</key>
+                        <string>@property (strong, nonatomic) UIWindow *window;
+</string>
+                        <key>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+                        <string>// Override point for customization after application launch.</string>
+                        <key>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return</key>
+                        <string>return YES;</string>
+                        <key>*:implementation:methods:viewDidLoad:super</key>
+                        <string>[super viewDidLoad];
+// Do any additional setup after loading the view, typically from a nib.</string>
+                        <key>*:implementation:methods:didReceiveMemoryWarning:super</key>
+                        <string>[super didReceiveMemoryWarning];
+// Dispose of any resources that can be recreated.</string>
+                    </dict>
+                </dict>
+                <key>Swift</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>AppDelegate.swift:comments</string>
+                        <string>AppDelegate.swift:imports:importCocoa</string>
+                        <string>AppDelegate.swift:UIApplicationMain</string>
+                        <string>AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)</string>
+                        <string>AppDelegate.swift:implementation:properties:window</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions(func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?\) -&gt; Bool)</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillResignActive(func applicationWillResignActive(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillResignActive:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidEnterBackground(func applicationDidEnterBackground(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidEnterBackground:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillEnterForeground(func applicationWillEnterForeground(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillEnterForeground:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidBecomeActive(func applicationDidBecomeActive(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidBecomeActive:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillTerminate(func applicationWillTerminate(application: UIApplication\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillTerminate:comments</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <!--
+                        <key>main.swift:main:UIApplicationMain</key>
+                        <string>UIApplicationMain(C_ARGC, C_ARGV, nil, NSStringFromClass(AppDelegate.self))</string>
+                         -->
+                        <key>AppDelegate.swift:UIApplicationMain</key>
+                        <string>@UIApplicationMain</string>
+                        <key>AppDelegate.swift:implementation:properties:window</key>
+                        <string>var window: UIWindow?</string>
+                        <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+                        <string>// Override point for customization after application launch.</string>
+                        <key>AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return</key>
+                        <string>return true</string>
+                        <key>*:implementation:methods:viewDidLoad:super</key>
+                        <string>super.viewDidLoad()
+// Do any additional setup after loading the view, typically from a nib.</string>
+                        <key>*:implementation:methods:didReceiveMemoryWarning:super</key>
+                        <string>super.didReceiveMemoryWarning()
+// Dispose of any resources that can be recreated.</string>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>universalDeviceFamily</string>
+            <key>Name</key>
+            <string>Devices:</string>
+            <key>Description</key>
+            <string>Which device family to create a project for</string>
+            <key>SortOrder</key>
+            <integer>1</integer>
+            <key>Type</key>
+            <string>popup</string>
+            <key>Default</key>
+            <string>iPhone</string>
+            <key>Values</key>
+            <array>
+                <string>Universal</string>
+                <string>iPhone</string>
+                <string>iPad</string>
+            </array>
+            <key>Units</key>
+            <dict>
+                <key>iPhone</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>Assets.xcassets</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>Images-iPhone.xcassets</string>
+                            <key>SortOrder</key>
+                            <integer>100</integer>
+                        </dict>
+                    </dict>
+                </dict>
+                <key>iPad</key>
+                <dict>
+                    <key>Project</key>
+                    <dict>
+                        <key>SharedSettings</key>
+                        <dict>
+                            <key>TARGETED_DEVICE_FAMILY</key>
+                            <string>2</string>
+                        </dict>
+                    </dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>Info.plist:UISupportedInterfaceOrientations~iPad</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>Assets.xcassets</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>Images-iPad.xcassets</string>
+                            <key>SortOrder</key>
+                            <integer>100</integer>
+                        </dict>
+                    </dict>
+                </dict>
+                <key>Universal</key>
+                <dict>
+                    <key>Project</key>
+                    <dict>
+                        <key>SharedSettings</key>
+                        <dict>
+                            <key>TARGETED_DEVICE_FAMILY</key>
+                            <string>1,2</string>
+                        </dict>
+                    </dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+                        <string>Info.plist:UISupportedInterfaceOrientations~iPad</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>Assets.xcassets</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>Images-Universal.xcassets</string>
+                            <key>SortOrder</key>
+                            <integer>100</integer>
+                        </dict>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>hasUnitTests</string>
+            <key>Name</key>
+            <string>Include Unit Tests</string>
+            <key>NotPersisted</key>
+            <false/>
+            <key>SortOrder</key>
+            <integer>100</integer>
+            <key>Type</key>
+            <string>checkbox</string>
+            <key>Default</key>
+            <string>true</string>
+            <key>Units</key>
+            <dict>
+                <key>true</key>
+                <dict>
+                    <key>Components</key>
+                    <array>
+                        <dict>
+                            <key>Identifier</key>
+                            <string>com.apple.dt.unit.cocoaTouchApplicationUnitTestBundle</string>
+                            <key>Name</key>
+                            <string>___PACKAGENAME___Tests</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>hasUITests</string>
+            <key>Name</key>
+            <string>Include UI Tests</string>
+            <key>NotPersisted</key>
+            <false/>
+            <key>SortOrder</key>
+            <integer>101</integer>
+            <key>Type</key>
+            <string>checkbox</string>
+            <key>Default</key>
+            <string>true</string>
+            <key>Units</key>
+            <dict>
+                <key>true</key>
+                <dict>
+                    <key>Components</key>
+                    <array>
+                        <dict>
+                            <key>Identifier</key>
+                            <string>com.apple.dt.unit.cocoaTouchApplicationUITestBundle</string>
+                            <key>Name</key>
+                            <string>___PACKAGENAME___UITests</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+
+        <!-- 创建者 -->
+        <dict>
+          <!-- 选项对象唯一标识 -->
+          <key>Identifier</key>
+          <string>c_createdBy</string>
+          <!-- 选项对象描述 -->
+          <key>Description</key>
+          <string>Created by who?</string>
+          <!-- 模版设置导航时，当前选项的前置标题 -->
+          <key>Name</key>
+          <string>Created By:</string>
+          <!-- 是否是必填选项 -->
+          <key>Required</key>
+          <true/>
+          <!-- 不会被序列化，如果为flase，表示会记住上一次输入的文本内容 -->
+          <key>NotPersisted</key>
+          <false/>
+          <!-- 排列顺序 -->
+          <key>SortOrder</key>
+          <integer>103</integer>
+          <!-- 选项的类型（文本框） -->
+          <key>Type</key>
+          <string>text</string>
+          <!-- 选项的默认值 -->
+          <key>Default</key>
+          <string>ReeFish</string>
+        </dict>
+        <!-- 公司 -->
+        <dict>
+          <key>Identifier</key>
+          <string>c_company</string>
+          <key>Description</key>
+          <string>the company</string>
+          <key>Name</key>
+          <string>Company:</string>
+          <key>Required</key>
+          <true/>
+          <key>NotPersisted</key>
+          <false/>
+          <key>SortOrder</key>
+          <integer>104</integer>
+          <key>Type</key>
+          <string>text</string>
+          <key>Default</key>
+          <string>ReeFish ( http://ReeFish.org )</string>
+        </dict>
+        <!-- license 版权许可协议（开源，或私有） -->
+        <dict>
+            <key>Identifier</key>
+                <string>c_license</string>
+            <key>Name</key>
+                <string>Copyright License:</string>
+            <key>NotPersisted</key>
+                <true/>
+            <key>SortOrder</key>
+                <integer>105</integer>
+            <key>Type</key>
+                <string>popup</string>
+            <key>Default</key>
+            <string>MIT</string>
+            <key>Values</key>
+            <array>
+                <string>private</string>
+                <string>MIT</string>
+                <string>Apache 2.0</string>
+                <string>BSD 3-Clause</string>
+                <string>Unlicense</string>
+                <string>Zlib</string>
+            </array>
+            <key>Units</key>
+            <dict>
+                <!-- 私有协议 -->
+                <key>private</key>
+                <dict>
+                    <key>Macros</key>
+                    <dict>
+                        <key>CopyrightPrivate</key>
+                            <string>All rights reserved.</string>
+                        <key>CopyrightLicense</key>
+                            <string></string>
+                    </dict>
+                </dict>
+                <!-- MIT协议 -->
+                <key>MIT</key>
+                <dict>
+                    <key>Macros</key>
+                    <dict>
+                        <key>CopyrightPrivate</key>
+                            <string></string>
+                        <key>CopyrightLicense</key>
+                            <string>// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+                        </string>
+                    </dict>
+                </dict>
+                <!-- Apache 2.0协议 -->
+                <key>Apache 2.0</key>
+                <dict>
+                    <key>Macros</key>
+                    <dict>
+                        <key>CopyrightPrivate</key>
+                            <string></string>
+                        <key>CopyrightLicense</key>
+                            <string>// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//   http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+                        </string>
+                    </dict>
+                </dict>
+                <!-- BSD 3-Clause协议 -->
+                <key>BSD 3-Clause</key>
+                <dict>
+                    <key>Macros</key>
+                    <dict>
+                        <key>CopyrightPrivate</key>
+                            <string></string>
+                        <key>CopyrightLicense</key>
+                            <string>// Redistribution and use in source and binary forms, with or without 
+// modification, are permitted provided that the following conditions are met:
+// 
+// Redistributions of source code must retain the above copyright notice, this 
+// list of conditions and the following disclaimer. Redistributions in binary 
+// form must reproduce the above copyright notice, this list of conditions and 
+// the following disclaimer in the documentation and/or other materials 
+// provided with the distribution. Neither the name of the nor the names of 
+// its contributors may be used to endorse or promote products derived from 
+// this software without specific prior written permission. 
+// 
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+// POSSIBILITY OF SUCH DAMAGE.
+                        </string>
+                    </dict>
+                </dict>
+                <!-- Unlicense协议 -->
+                <key>Unlicense</key>
+                <dict>
+                    <key>Macros</key>
+                    <dict>
+                        <key>CopyrightPrivate</key>
+                            <string></string>
+                        <key>CopyrightLicense</key>
+                            <string>// This is free and unencumbered software released into the public domain.
+//
+// Anyone is free to copy, modify, publish, use, compile, sell, or
+// distribute this software, either in source code form or as a compiled
+// binary, for any purpose, commercial or non-commercial, and by any
+// means.
+
+// In jurisdictions that recognize copyright laws, the author or authors
+// of this software dedicate any and all copyright interest in the
+// software to the public domain. We make this dedication for the benefit
+// of the public at large and to the detriment of our heirs and
+// successors. We intend this dedication to be an overt act of
+// relinquishment in perpetuity of all present and future rights to this
+// software under copyright law.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+// OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+// ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+// OTHER DEALINGS IN THE SOFTWARE.
+//
+// For more information, please refer to &lt;http://unlicense.org&gt;
+                        </string>
+                    </dict>
+                </dict>
+                <!-- Zlib协议 -->
+                <key>Zlib</key>
+                <dict>
+                    <key>Macros</key>
+                    <dict>
+                        <key>CopyrightPrivate</key>
+                            <string></string>
+                        <key>CopyrightLicense</key>
+                            <string>// This software is provided 'as-is', without any express or implied warranty.
+// In no event will the authors be held liable for any damages arising from 
+// the use of this software.
+//
+// Permission is granted to anyone to use this software for any purpose, 
+// including commercial applications, and to alter it and redistribute it 
+// freely, subject to the following restrictions:
+//
+// 1. The origin of this software must not be misrepresented; you must not 
+// claim that you wrote the original software. If you use this software in a 
+// product, an acknowledgment in the product documentation would be 
+// appreciated but is not required.
+//
+// 2. Altered source versions must be plainly marked as such, and must not be
+// misrepresented as being the original software.
+//
+// 3. This notice may not be removed or altered from any source distribution.
+                        </string>
+                    </dict>
+                </dict>
+
+            </dict>
+        </dict>
+	</array>
+
+    <!-- （工程模版需要包含的节点）包含文件 -->
+    <key>Nodes</key>
+    <array>
+        <string>Assets.xcassets</string>
+        <string>Info.plist:iPhone</string>
+        <string>Info.plist:UIRequiredDeviceCapabilities:base</string>
+    </array>
+
+    <!-- 具体内容的定义（字典） -->
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:iPhone</key>
+        <string>&lt;key&gt;LSRequiresIPhoneOS&lt;/key&gt;
+&lt;true/&gt;</string>
+        <key>Info.plist:UIRequiredDeviceCapabilities</key>
+        <dict>
+            <key>Beginning</key>
+            <string>&lt;key&gt;UIRequiredDeviceCapabilities&lt;/key&gt;
+&lt;array&gt;</string>
+            <key>End</key>
+            <string>&lt;/array&gt;</string>
+            <key>Indent</key>
+            <integer>1</integer>
+        </dict>
+        <key>Info.plist:UIRequiredDeviceCapabilities:base</key>
+        <string>&lt;string&gt;armv7&lt;/string&gt;</string>
+        <key>Info.plist:statusBarTintForNavBar</key>
+        <string>&lt;key&gt;UIStatusBarTintParameters&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;UINavigationBar&lt;/key&gt;
+    &lt;dict&gt;
+        &lt;key&gt;Style&lt;/key&gt;
+        &lt;string&gt;UIBarStyleDefault&lt;/string&gt;
+        &lt;key&gt;Translucent&lt;/key&gt;
+        &lt;false/&gt;
+    &lt;/dict&gt;
+&lt;/dict&gt;
+</string>
+
+        <!-- 横竖屏方向 -->
+        <key>Info.plist:UISupportedInterfaceOrientations~iPhone</key>
+        <string>&lt;key&gt;UISupportedInterfaceOrientations&lt;/key&gt;
+&lt;array&gt;
+     &lt;string&gt;UIInterfaceOrientationPortrait&lt;/string&gt;
+&lt;/array&gt;</string>
+        <key>Info.plist:UISupportedInterfaceOrientations~iPad</key>
+        <string>&lt;key&gt;UISupportedInterfaceOrientations~ipad&lt;/key&gt;
+&lt;array&gt;
+    &lt;string&gt;UIInterfaceOrientationPortrait&lt;/string&gt;
+&lt;/array&gt;</string>
+
+
+        <!-- 代码文件中的注释 -->
+        <key>*:comments</key>
+        <string>//
+//  ___FILENAME___
+//  ___PACKAGENAME___
+//
+//  Created by ___CreatedBy___ on ___DATE___.
+//  Copyright (c) ___YEAR___ ___ReeFish___. ___CopyrightPrivate___
+//  
+___CopyrightLicense___
+</string>
+
+        <!-- This is defined globally for templates that don't want language choice -->
+        <!-- <key>*:imports:importCocoa</key>
+        <string>#import &lt;UIKit/UIKit.h&gt;</string>
+        <key>*:imports:importCocoaForUmbrellaHeader</key>
+        <string>#import &lt;UIKit/UIKit.h&gt;</string> -->
+        
+        <key>*:implementation:methods:applicationWillResignActive:comments</key>
+        <string>// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+</string>
+        <key>*:implementation:methods:applicationDidEnterBackground:comments</key>
+        <string>// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+</string>
+        <key>*:implementation:methods:applicationWillEnterForeground:comments</key>
+        <string>// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.</string>
+        <key>*:implementation:methods:applicationDidBecomeActive:comments</key>
+        <string>// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.</string>
+        <key>*:implementation:methods:applicationWillTerminate:comments</key>
+        <string>// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.</string>
+    </dict>
+
+    <!-- 自定义模版宏 -->
+    <key>Macros</key>
+    <dict>
+        <key>ReeFish</key>
+        <string>___VARIABLE_c_company___</string>
+        <key>CreatedBy</key>
+        <string>___VARIABLE_c_createdBy___</string>
+        <key>CopyrightPrivate</key>
+        <string>All rights reserved.</string>
+        <key>CopyrightLicense</key>
+        <string></string>
+    </dict>
+
+</dict>
+</plist>
