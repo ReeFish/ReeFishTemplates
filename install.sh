@@ -20,4 +20,6 @@ echo "Installing ReeFish File templates to $REEFISH_TARGET_FILE_TEMPLATES_DIR fr
 mkdir -p "$FILE_TEMPLATES_DIR"
 cp -R "$REEFISH_SOURCE_FILE_TEMPLATES_DIR" "$FILE_TEMPLATES_DIR"
 
+find "$REEFISH_TARGET_PROJECT_TEMPLATES_DIR" -name ".gitkeep" -type f -exec rm -rf {} \;
+
 echo "Install Finished."
