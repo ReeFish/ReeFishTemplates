@@ -39,10 +39,6 @@
             <string>com.apple.dt.cocoaTouchApplicationTarget</string>
             <key>SharedSettings</key>
             <dict>
-                <key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-                <string>AppIcon</string>
-                <key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-                <string>LaunchImage</string>
                 <key>LD_RUNPATH_SEARCH_PATHS</key>
                 <string>$(inherited) @executable_path/Frameworks</string>
                 <key>IPHONEOS_DEPLOYMENT_TARGET</key>
@@ -67,6 +63,8 @@
     <!-- 可选配置 -->
 	<key>Options</key>
 	<array>
+
+        <!-- 语言选择（选择oc，还是swift） -->
         <dict>
             <key>Identifier</key>
             <string>languageChoice</string>
@@ -180,6 +178,9 @@
                 </dict>
             </dict>
         </dict>
+        <!-- end -->
+
+        <!-- （根据iphone，还是ipad）选择不同的资源文件夹 -->
         <dict>
             <key>Identifier</key>
             <string>universalDeviceFamily</string>
@@ -213,6 +214,8 @@
                         <dict>
                             <key>Path</key>
                             <string>Images-iPhone.xcassets</string>
+                            <key>Group</key>
+                            <string>Supporting Files</string>
                             <key>SortOrder</key>
                             <integer>100</integer>
                         </dict>
@@ -238,6 +241,8 @@
                         <dict>
                             <key>Path</key>
                             <string>Images-iPad.xcassets</string>
+                            <key>Group</key>
+                            <string>Supporting Files</string>
                             <key>SortOrder</key>
                             <integer>100</integer>
                         </dict>
@@ -264,6 +269,8 @@
                         <dict>
                             <key>Path</key>
                             <string>Images-Universal.xcassets</string>
+                            <key>Group</key>
+                            <string>Supporting Files</string>
                             <key>SortOrder</key>
                             <integer>100</integer>
                         </dict>
@@ -271,6 +278,9 @@
                 </dict>
             </dict>
         </dict>
+        <!-- end -->
+
+        <!-- 选择是否包含单元测试 -->
         <dict>
             <key>Identifier</key>
             <string>hasUnitTests</string>
@@ -329,6 +339,8 @@
                 </dict>
             </dict>
         </dict>
+        <!-- end -->
+
 
         <!-- 创建者 -->
         <dict>
@@ -567,6 +579,7 @@
     <key>Nodes</key>
     <array>
         <string>Assets.xcassets</string>
+
         <string>Info.plist:iPhone</string>
         <string>Info.plist:UIRequiredDeviceCapabilities:base</string>
     </array>
@@ -574,6 +587,34 @@
     <!-- 具体内容的定义（字典） -->
     <key>Definitions</key>
     <dict>
+
+        <!-- Info.plist文件定义（存放group位置到 Supporting Files） -->
+        <key>Info.plist</key>
+        <dict>
+            <!-- plist包裹标签 -->
+            <key>Beginning</key>
+            <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+</string>
+            <key>End</key>
+            <string>&lt;/dict&gt;
+&lt;/plist&gt;</string>
+            <key>Indent</key>
+            <integer>1</integer>
+            <!-- 设置到 Supporting Files 中 -->
+            <key>Group</key>
+            <string>Supporting Files</string>
+            <key>TargetIndices</key>
+            <array/>
+            <key>SubstituteMacros</key>
+            <true/>
+        </dict>
+        <!-- end -->
+
+
+        <!-- Info.plist中的值定义 -->
         <key>Info.plist:iPhone</key>
         <string>&lt;key&gt;LSRequiresIPhoneOS&lt;/key&gt;
 &lt;true/&gt;</string>
@@ -601,6 +642,7 @@
     &lt;/dict&gt;
 &lt;/dict&gt;
 </string>
+        <!-- end -->
 
         <!-- 横竖屏方向 -->
         <key>Info.plist:UISupportedInterfaceOrientations~iPhone</key>
@@ -613,6 +655,7 @@
 &lt;array&gt;
     &lt;string&gt;UIInterfaceOrientationPortrait&lt;/string&gt;
 &lt;/array&gt;</string>
+        <!-- end -->
 
 
         <!-- 代码文件中的注释 -->

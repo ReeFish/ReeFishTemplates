@@ -7,7 +7,7 @@
 	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
     <!-- 模版唯一标识ID -->
 	<key>Identifier</key>
-	<string>org.reefish.app.template.base</string>
+	<string>org.reefish.app.template.reefish</string>
     <!-- 模版的名称 -->
     <key>Name</key>
     <string>ReeFish App</string>
@@ -30,9 +30,18 @@
 	<integer>2</integer>
 
     <!-- 目标对象 -->
-  <!--   <key>Targets</key>
+    <key>Targets</key>
     <array>
-    </array> -->
+        <dict>
+            <key>SharedSettings</key>
+            <dict>
+                <key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+                <string>AppIcon</string>
+                <key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+                <string>LaunchImage</string>
+            </dict>
+        </dict>
+    </array>
 
 
     <!-- 可选配置 -->
@@ -204,9 +213,129 @@ label.center = self.view.center;</string>
                 </dict>
             </dict>
         </dict>
-
         
+
+        <!-- （根据iphone，还是ipad）选择不同的资源文件夹 -->
+        <!-- 注意：虽然基类模版也定义了资源目录，但是路径不一样，必须重写一下，才能定位到新模版的位置 -->
+        <dict>
+            <key>Identifier</key>
+            <string>universalDeviceFamily</string>
+            <key>Name</key>
+            <string>Devices:</string>
+            <key>Description</key>
+            <string>Which device family to create a project for</string>
+            <key>SortOrder</key>
+            <integer>1</integer>
+            <key>Type</key>
+            <string>popup</string>
+            <key>Default</key>
+            <string>iPhone</string>
+            <key>Values</key>
+            <array>
+                <string>Universal</string>
+                <string>iPhone</string>
+                <string>iPad</string>
+            </array>
+            <key>Units</key>
+            <dict>
+                <key>iPhone</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>Assets.xcassets</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>Images-iPhone.xcassets</string>
+                            <key>Group</key>
+                            <string>Supporting Files</string>
+                            <key>SortOrder</key>
+                            <integer>100</integer>
+                        </dict>
+                    </dict>
+                </dict>
+                <key>iPad</key>
+                <dict>
+                    <key>Project</key>
+                    <dict>
+                        <key>SharedSettings</key>
+                        <dict>
+                            <key>TARGETED_DEVICE_FAMILY</key>
+                            <string>2</string>
+                        </dict>
+                    </dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>Info.plist:UISupportedInterfaceOrientations~iPad</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>Assets.xcassets</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>Images-iPad.xcassets</string>
+                            <key>Group</key>
+                            <string>Supporting Files</string>
+                            <key>SortOrder</key>
+                            <integer>100</integer>
+                        </dict>
+                    </dict>
+                </dict>
+                <key>Universal</key>
+                <dict>
+                    <key>Project</key>
+                    <dict>
+                        <key>SharedSettings</key>
+                        <dict>
+                            <key>TARGETED_DEVICE_FAMILY</key>
+                            <string>1,2</string>
+                        </dict>
+                    </dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+                        <string>Info.plist:UISupportedInterfaceOrientations~iPad</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>Assets.xcassets</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>Images-Universal.xcassets</string>
+                            <key>Group</key>
+                            <string>Supporting Files</string>
+                            <key>SortOrder</key>
+                            <integer>100</integer>
+                        </dict>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+        <!-- end -->
+
+
 	</array>
+
+    <!-- （工程模版需要包含的节点）包含文件 -->
+    <key>Nodes</key>
+    <array>
+
+        <!-- 资源目录 -->
+        <string>../resources/</string>
+
+        <!-- ..表示相对于AppDelegate文件的上级目录，目录名为src -->
+        <string>../src/</string>
+
+        <!-- git忽略文件 -->
+        <string>../.gitignore</string>
+
+        <!-- Podfile文件 -->
+        <string>../Podfile</string>
+    </array>
+
 
     <!-- 相关的文件、目录定义 -->
     <key>Definitions</key>
@@ -235,17 +364,6 @@ label.center = self.view.center;</string>
             <array/>
         </dict>
 
-        <key>empty/</key>
-        <dict>
-            <key>Path</key>
-            <!-- 需要在TemplateInfo.plist同级目录生成一个空文件夹folder -->
-            <string>folder</string>
-            <key>Group</key>
-            <array/>
-            <key>TargetIndices</key>
-            <array/>
-        </dict>
-
         <key>../.gitignore</key>
         <dict>
             <key>Path</key>
@@ -266,24 +384,7 @@ label.center = self.view.center;</string>
             <array/>
         </dict>
     </dict>
-    <!-- 模版需要包含的节点列表 -->
-    <key>Nodes</key>
-    <array>
-        <!-- 资源目录 -->
-        <string>../resources/</string>
-
-        <!-- ..表示相对于AppDelegate文件的上级目录，目录名为src -->
-        <string>../src/</string>
-
-        <!-- 测试创建一个空目录 -->
-        <!-- <string>empty/</string> -->
-
-        <!-- git忽略文件 -->
-        <string>../.gitignore</string>
-
-        <!-- Podfile文件 -->
-        <string>../Podfile</string>
-    </array>
+    
 
     <!-- 自定义模版宏 -->
     <key>Macros</key>
